@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Welcome to Unblocked Arcade</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+<style>
+  :root {
+    --bg: #231a5c;
+    --panel: #2f2477;
+    --ink: #f3efff;
+    --muted: #b9b0e8;
+    --yellow: #ffd23f;
+    --pink: #ff5d8f;
+    --cyan: #5de0e6;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+    line-height: 1.5;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 20px 40px; }
+  h1 {
+    font-family: "Press Start 2P", "Courier New", monospace;
+    font-size: clamp(20px, 5vw, 34px);
+    line-height: 1.5;
+    margin: 0 0 16px;
+    color: var(--yellow);
+    text-shadow: 4px 4px 0 var(--pink);
+  }
+  .intro { color: var(--muted); margin: 0 0 40px; max-width: 52ch; }
+  h2 {
+    font-family: "Press Start 2P", "Courier New", monospace;
+    font-size: 14px;
+    font-weight: normal;
+    color: var(--cyan);
+    margin: 0 0 16px;
+  }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li + li { margin-top: 12px; }
+  .game {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 16px 20px;
+    background: var(--panel);
+    border: 3px solid var(--cyan);
+    border-radius: 4px;
+    color: inherit;
+    text-decoration: none;
+  }
+  .game:hover { border-color: var(--yellow); }
+  .game:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+  .title { font-size: 18px; font-weight: bold; }
+  .desc { color: var(--muted); font-size: 14px; }
+  .play {
+    flex: none;
+    font-family: "Press Start 2P", "Courier New", monospace;
+    font-size: 12px;
+    padding: 10px 14px;
+    background: var(--yellow);
+    color: #231a5c;
+    border-radius: 3px;
+  }
+  .game:hover .play { background: var(--pink); color: #fff; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 13px; }
+</style>
+</head>
+<body>
+  <main class="wrap">
+    <h1>Welcome to Unblocked Arcade</h1>
+    <p class="intro">Pick a game and start playing. No downloads, no sign-up.</p>
+
+    <h2>Games</h2>
+    <ul>
+      <!-- To add a game, copy one <li> block, then change the link, title and description.
+           The link must point to the game's folder, like games/snake/ -->
+      <li>
+        <a class="game" href="https://leonandredev.github.io/crossy.road/">
+          <span>
+            <span class="title">Crossy Road</span><br>
+            <span class="desc">Cross the road without getting run over.</span>
+          </span>
+          <span class="play">Play</span>
+        </a>
+      </li>
+      <li>
+        <a class="game" href="games/game-two/">
+          <span>
+            <span class="title">Game Two</span><br>
+            <span class="desc">A short description of the game.</span>
+          </span>
+          <span class="play">Play</span>
+        </a>
+      </li>
+      <li>
+        <a class="game" href="games/game-three/">
+          <span>
+            <span class="title">Game Three</span><br>
+            <span class="desc">A short description of the game.</span>
+          </span>
+          <span class="play">Play</span>
+        </a>
+      </li>
+    </ul>
+
+    <footer>Game credits and licenses are listed in each game's folder.</footer>
+  </main>
+</body>
+</html>
